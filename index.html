@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KBS 熊本フィールド 2023</title>
+  <title>KBS 熊本F 交通量分析</title>
 </head>
 <body>
-  <!-- <img src="logo.png" alt="ロゴ画像" width="160" height="160"> -->
-  <h1>KBS 熊本フィールド 2023</h1>
+  <h1>KBS 熊本フィールド 2023 交通量分析</h1>
 
-  <!-- <h2>目的</h2> -->
-  <p>地域課題解決に向けた取り組みの一環として、交通オープンデータを用いて交通量分析を行いました。</p>
+  <p>地域課題解決に向けた取り組みの一環として、熊本県警察が車両感知器などの計測機器で収集した断面交通量のオープンデータを用いて以下の分析を行いました。</p>
+  <ul>
+    <li><a href="#weekday">平日の交通量の分析</a></li>
+    <li><a href="#transition">過去4年間の交通量の推移</a></li>
+    <li><a href="#dayofweek">2022年の曜日別交通量</a></li>
+  </ul>
 
-  <h2>平日の交通量の分析</h2>
+  <h2 id="weekday">平日の交通量の分析</h2>
   <p>2022年の全ての平日の平均交通量の一日24時間の推移のグラフを、地図上の計測地点にプロットしました。<br>リンクをクリックして表示してください。</p>
   <ul>
     <li><a href="traffic_Koshi_Area.html" target="_blank">合志市周辺の交通量分析</a></li>
@@ -24,37 +27,37 @@
     <br>
     <li>交通量とは、各計測地点での5分当たりの通過車両数です。</li>
     <li>熊本市のデータは、3.5MBと大きいので、有線や無線LANの接続環境での閲覧をおすすめします。</li>
-    <li>合志市周辺とは合志市全域に加えて、就業・就学に関連する熊本市北部、就業や物流に関連するセミコンテクノパーク周辺地域、熊本空港の北側地域などを含めました。<br>具体的には、以下の緯度、経度で囲まれる地域としました。</li>
+    <li>合志市周辺とは合志市全域に加えて、就業・就学に関連する熊本市北部、就業や物流に関連するセミコンテクノパーク周辺地域、熊本空港の北側地域などを含めました。具体的には、以下の緯度、経度で囲まれる地域としました。</li>
     <ul style="list-style-position: inside;">
       <li>32.836216 < 緯度 < 32.923801</li>
       <li>130.698463 < 経度 < 130.875034</li>
     </ul>
   </ul>
-  
-  <h2>過去4年間の交通量の推移</h2>
+
+  <h2 id="transition">過去4年間の交通量の推移</h2>
   <p>2019年1月から2023年2月までの交通量の推移をグラフにしました。</p>
   <ul>
     <li>合志市周辺の交通量の推移</li>
-    <img src="Years_Koshi_Area.png" alt="合志市周辺のグラフ">
+    <img src="Years_Koshi_Area.png" alt="合志市周辺のグラフ" style="max-width: 100%; height: auto;">
     <li>合志市の交通量の推移</li>
-    <img src="Years_Koshi_City.png" alt="合志市のグラフ">
+    <img src="Years_Koshi_City.png" alt="合志市のグラフ" style="max-width: 100%; height: auto;">
     <li>熊本市の交通量の推移</li>
-    <img src="Years_Kumamoto_City.png" alt="熊本市のグラフ">
+    <img src="Years_Kumamoto_City.png" alt="熊本市のグラフ" style="max-width: 100%; height: auto;">
     <li>上天草市の交通量の推移</li>
-    <img src="Years_KamiAmakusa_City.png" alt="上天草市のグラフ">
+    <img src="Years_KamiAmakusa_City.png" alt="上天草市のグラフ" style="max-width: 100%; height: auto;">
   </ul>
 
-  <h2>2022年の曜日別交通量</h2>
+  <h2 id="dayofweek">2022年の曜日別交通量</h2>
   <p>2022年の交通量を曜日別に集計しました。</p>
   <ul>
     <li>合志市周辺の曜日別交通量</li>
-    <img src="Day_of_Week_Koshi_Area.png" alt="合志市周辺のグラフ">
+    <img src="Day_of_Week_Koshi_Area.png" alt="合志市周辺のグラフ" style="max-width: 100%; height: auto;">
     <li>合志市の曜日別交通量</li>
-    <img src="Day_of_Week_Koshi_City.png" alt="合志市周辺のグラフ">
+    <img src="Day_of_Week_Koshi_City.png" alt="合志市周辺のグラフ" style="max-width: 100%; height: auto;">
     <li>熊本市の曜日別交通量</li>
-    <img src="Day_of_Week_Kumamoto_City.png" alt="熊本市のグラフ">
+    <img src="Day_of_Week_Kumamoto_City.png" alt="熊本市のグラフ" style="max-width: 100%; height: auto;">
     <li>上天草市の曜日別交通量</li>
-    <img src="Day_of_Week_KamiAmakusa_City.png" alt="上天草市のグラフ">
+    <img src="Day_of_Week_KamiAmakusa_City.png" alt="上天草市のグラフ" style="max-width: 100%; height: auto;">
   </ul>
 
   <h2>補足説明</h2>
@@ -79,7 +82,7 @@
   </ul>
 
   <footer>
-    <small>(c) KBS</small>
+    <small>updated: ko-kjs 2023/4/13</small>
   </footer>
 </body>
 </html>
