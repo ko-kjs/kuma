@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_004ca428d8caeb0d7a4b165a0ba1a710 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    <div align="left": style="border: 1px solid black; position: fixed; top: 10px; right: 10px; background-color: white; z-index:9999; padding: 5px;"><b>合志市 2022年<br>平日平均値 ヒートマップ</b><br></div>
+    
+            <div class="folium-map" id="map_004ca428d8caeb0d7a4b165a0ba1a710" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_004ca428d8caeb0d7a4b165a0ba1a710 = L.map(
+                "map_004ca428d8caeb0d7a4b165a0ba1a710",
+                {
+                    center: [32.88603602449825, 130.7896734402924],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3e14210d25a4dd7fea3f1c9ccc33f8c3 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_004ca428d8caeb0d7a4b165a0ba1a710);
+        
+    
+            var marker_9f88119155eea13d6134991a6547c89f = L.marker(
+                [32.88603602449825, 130.7896734402924],
+                {}
+            ).addTo(map_004ca428d8caeb0d7a4b165a0ba1a710);
+        
+    
+            marker_9f88119155eea13d6134991a6547c89f.bindTooltip(
+                `<div>
+                     合志市役所
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var heat_map_38c2be3726d9129b9a7db26d7f55597b = L.heatLayer(
+                [[32.85462349, 130.72655147, 0.046511627906976744], [32.85478, 130.72665673, 0.011627906976744186], [32.88207782, 130.74841912, 0.5980066445182725], [32.86415436, 130.73435463, 0.5448504983388704], [32.85806851, 130.72876531, 1.0], [32.87623721, 130.74503213, 0.46179401993355484], [32.89020925, 130.7535794, 0.3920265780730897], [32.88028705, 130.74737764, 0.48172757475083056], [32.87622576, 130.7450257, 0.4750830564784053], [32.8661992, 130.73786487, 0.5880398671096345], [32.90550563, 130.76358573, 0.3023255813953488], [32.90614673, 130.76400787, 0.34053156146179403], [32.88639968, 130.75070461, 0.2707641196013289], [32.88589264, 130.7503629, 0.44019933554817275], [32.86991027, 130.74070151, 0.059800664451827246], [32.86934064, 130.74025404, 0.5232558139534884], [32.86265135, 130.73253392, 0.0], [32.88538953, 130.75448123, 0.4634551495016611], [32.88078806, 130.79123891, 0.37375415282392027], [32.88168743, 130.78691885, 0.2807308970099668], [32.88046538, 130.79779704, 0.21262458471760798], [32.88046539, 130.79780235, 0.3654485049833887]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_004ca428d8caeb0d7a4b165a0ba1a710);
+        
+</script>
+</html>

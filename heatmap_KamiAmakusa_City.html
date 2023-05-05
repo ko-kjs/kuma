@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b534f31130a48a3c852c0d042a270067 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    <div align="left": style="border: 1px solid black; position: fixed; top: 10px; right: 10px; background-color: white; z-index:9999; padding: 5px;"><b>上天草市 2022年<br>平日平均値 ヒートマップ</b><br></div>
+    
+            <div class="folium-map" id="map_b534f31130a48a3c852c0d042a270067" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b534f31130a48a3c852c0d042a270067 = L.map(
+                "map_b534f31130a48a3c852c0d042a270067",
+                {
+                    center: [32.58788852771875, 130.43043574232937],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cbf3e7a20f9fc019c05f4ccb6f17f9c1 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b534f31130a48a3c852c0d042a270067);
+        
+    
+            var marker_4b460c2b03a0e7da60c50dfa6419d634 = L.marker(
+                [32.58788852771875, 130.43043574232937],
+                {}
+            ).addTo(map_b534f31130a48a3c852c0d042a270067);
+        
+    
+            marker_4b460c2b03a0e7da60c50dfa6419d634.bindTooltip(
+                `<div>
+                     上天草市役所
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var heat_map_4d4db4720ccc8f8bbd40e424808006e8 = L.heatLayer(
+                [[32.49655327, 130.41027153, 0.27246376811594203], [32.56838114, 130.41464639, 0.7768115942028986], [32.57201879, 130.41855962, 0.6985507246376812], [32.57656716, 130.42073163, 0.8840579710144928], [32.61768731, 130.44996217, 0.0], [32.6122639, 130.45580629, 0.16521739130434782], [32.49693389, 130.42237005, 0.32463768115942027], [32.50188176, 130.42666405, 0.35942028985507246], [32.51062643, 130.42922564, 0.4115942028985507], [32.58275594, 130.42737449, 0.9217391304347826], [32.49907779, 130.39547438, 0.263768115942029], [32.50001586, 130.40208439, 0.26956521739130435], [32.52271881, 130.42155075, 0.6927536231884058], [32.52583179, 130.42489594, 0.6405797101449275], [32.53425462, 130.42288271, 0.7420289855072464], [32.53438218, 130.42282329, 0.7507246376811594], [32.54124889, 130.4230757, 0.7536231884057971], [32.54223944, 130.42222298, 0.6811594202898551], [32.54842911, 130.4217745, 0.7391304347826086], [32.54890482, 130.42166717, 0.7942028985507247], [32.55184667, 130.4184595, 0.8173913043478261], [32.55640573, 130.41592851, 0.744927536231884], [32.55645084, 130.41591174, 0.7217391304347827], [32.58537307, 130.42950634, 1.0], [32.5899192, 130.42993742, 0.7942028985507247], [32.59586767, 130.43424484, 0.7420289855072464], [32.6127354, 130.44391862, 0.12753623188405797], [32.51637786, 130.42868433, 0.32753623188405795], [32.51580397, 130.42887852, 0.08985507246376812], [32.61571519, 130.45341654, 0.15072463768115943], [32.5646129, 130.40993137, 0.7014492753623188], [32.58092953, 130.42487503, 0.7710144927536232], [32.6063985, 130.44054615, 0.04927536231884058], [32.6035779, 130.43882189, 0.1681159420289855]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            ).addTo(map_b534f31130a48a3c852c0d042a270067);
+        
+</script>
+</html>
